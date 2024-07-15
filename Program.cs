@@ -1,18 +1,23 @@
 ﻿using System;
 
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!\n--------------------------------------------\n");
+Main();
 
-// Let the moose speak!
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
+void Main()
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!\n--------------------------------------------\n");
 
-// Ask a question
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-SecretQuestion();
-ForestQuestion();
-ClubQuestion();
+    // Let the moose speak!
+    MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
+
+    // Ask a question
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    LoveCSharpQuestion();
+    SecretQuestion();
+    ForestQuestion();
+    ClubQuestion();
+}
 
 
 void MooseSays(string message)
@@ -54,12 +59,16 @@ void MooseSays(string message)
 bool MooseAsks(string question)
 {
     Console.Write($"{question} (Y/N): ");
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
     string answer = Console.ReadLine().ToLower();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
     while (answer != "y" && answer != "n")
     {
         Console.Write($"{question} (Y/N): ");
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
         answer = Console.ReadLine().ToLower();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
     }
 
     if (answer == "y")
