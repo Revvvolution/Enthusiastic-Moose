@@ -2,7 +2,17 @@
 
 Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!\n--------------------------------------------\n");
 
+// Let the moose speak!
+MooseSays("H I, I'M  E N T H U S I A S T I C !");
+MooseSays("I really am enthusiastic");
 
+// Ask a question
+CanadaQuestion();
+EnthusiasticQuestion();
+LoveCSharpQuestion();
+SecretQuestion();
+ForestQuestion();
+ClubQuestion();
 
 
 void MooseSays(string message)
@@ -39,9 +49,6 @@ void MooseSays(string message)
     ");
 }
 
-// Let the moose speak!
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
 
 
 bool MooseAsks(string question)
@@ -66,16 +73,83 @@ bool MooseAsks(string question)
 }
 
 
-// Ask a question
-bool isTrue = MooseAsks("Is Canada real?");
-// Console.WriteLine(isTrue); test for boolean response
-if (isTrue)
+
+// Making individual question its own function
+void CanadaQuestion()
 {
-    MooseSays("Really? It seems very unlikely.");
-}
-else
-{
-    MooseSays("I  K N E W  I T !!!");
+    bool isTrue = MooseAsks("Is Canada real?");
+    // Console.WriteLine(isTrue); test for boolean response
+    if (isTrue)
+    {
+        MooseSays("Really? It seems very unlikely.");
+    }
+    else
+    {
+        MooseSays("I  K N E W  I T !!!");
+    }
 }
 
+void EnthusiasticQuestion()
+{
+    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+    if (isEnthusiastic)
+    {
+        MooseSays("Yay!");
+    }
+    else
+    {
+        MooseSays("You should try it!");
+    }
+}
 
+void LoveCSharpQuestion()
+{
+    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+    if (doesLoveCSharp)
+    {
+        MooseSays("Good job sucking up to your instructor!");
+    }
+    else
+    {
+        MooseSays("You will...oh, yes, you will...");
+    }
+}
+
+void SecretQuestion()
+{
+    bool wantsSecret = MooseAsks("Do you want to know a secret?");
+    if (wantsSecret)
+    {
+        MooseSays("ME TOO!!!! I love secrets...tell me one!");
+    }
+    else
+    {
+        MooseSays("Oh, no...secrets are the best, I love to share them!");
+    }
+}
+
+void ForestQuestion()
+{
+    bool doesFrolick = MooseAsks("Do you enjoy frolicking in the forest?");
+    if (doesFrolick)
+    {
+        MooseSays("R I G H T  O N ! Frolicking among the trees is my favorite pastime.");
+    }
+    else
+    {
+        MooseSays("Oh, really? Well, more frolicking for me, I guess!");
+    }
+}
+
+void ClubQuestion()
+{
+    bool wantsClub = MooseAsks("Would you like to join my antler-polishing club?");
+    if (wantsClub)
+    {
+        MooseSays("F A N T A S T I C !! We’ll make those antlers shine like the northern lights!");
+    }
+    else
+    {
+        MooseSays("No worries, maybe next time. Keep those antlers wild and free!");
+    }
+}
